@@ -152,19 +152,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一篇博客文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-个人博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/">我的第一篇博客文档</a>
+      <a class="article-title" href="/2022/08/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">搭建个人博客</a>
     </h1>
   
 
         
-        <a href="/2022/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/" class="archive-article-date">
+        <a href="/2022/08/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
   	<time datetime="2022-08-06T07:00:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-06</time>
 </a>
         
@@ -172,8 +172,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="http://www.codesheep.cn/">www.codesheep.cn</a></p>
+        <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>node -v	#查看node版本<br>npm -v	#查看npm版本<br>npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>	#安装淘宝的cnpm 管理器<br>cnpm -v	#查看cnpm版本<br>cnpm install -g hexo-cli    #安装hexo框架<br>hexo -v	#查看hexo版本<br>mkdir blog	#创建blog目录<br>cd blog	 #进入blog目录<br>sudo hexo init 	#生成博客 初始化博客<br>hexo s	#启动本地博客服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>	#本地访问地址<br>hexo n “我的第一篇文章” #创建新的文章<br>#返回blog目录<br>hexo clean #清理<br>hexo g #生成<br>#Github创建一个新的仓库 YourGithubName.github.io<br>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件</p>
+<hr>
+<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="#配置_config.yml "></a>#配置_config.yml </h2><pre><code># Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+      type: git
+     repo: https://github.com/yumeiyan77/yumeiyan77.github.io.git
+      branch: main
+</code></pre>
+<hr>
+<p>hexo d	#部署到Github仓库里<br><a target="_blank" rel="noopener" href="https://yumeiyan77.github.io/">https://yumeiyan77.github.io/</a>  #访问这个地址可以查看博客</p>
+<p> git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia  #下载yilia主题到本地</p>
+<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
+<p>hexo c	#清理一下<br>hexo g	#生成<br>hexo d	#部署到远程Github仓库<br>第一次推要设置<br>git config –global user.email “xxx”      github的邮箱<br>git config –global user.name “xxx”		  github的用户名<br><a target="_blank" rel="noopener" href="https://yumeiyan77.github.io/">https://yumeiyan77.github.io/</a>  #查看博客</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="http://www.codesheep.cn/">www.codesheep.cn</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?spm_id_from=333.880.my_history.page.click&amp;vd_source=9de8e34bb72173af3de9fd8fabd28d5d">https://www.bilibili.com/video/BV1Yb411a7ty?spm_id_from=333.880.my_history.page.click&amp;vd_source=9de8e34bb72173af3de9fd8fabd28d5d</a></p>
 
       
 
@@ -186,7 +199,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/08/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
         </p>
       
 

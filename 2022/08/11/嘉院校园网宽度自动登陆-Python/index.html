@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fan2627145175.gitee.io/boke">
-  <title>Tag: c++ | 雨昧阎的博客</title>
+  <title>嘉院校园网宽度自动登陆(Python) | 雨昧阎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="雨昧阎的博客">
-<meta property="og:url" content="https://fan2627145175.gitee.io/boke/tags/c/index.html">
+  <meta name="description" content="#原码来自https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41797946&#x2F;article&#x2F;details&#x2F;89417722的作者，据此更改调整。  import requestsimport timeimport reimport mathdef force(msg):    ret &#x3D; []    for w in msg:        ret.append(ord(w))">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嘉院校园网宽度自动登陆(Python)">
+<meta property="og:url" content="https://fan2627145175.gitee.io/boke/2022/08/11/%E5%98%89%E9%99%A2%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%AE%BD%E5%BA%A6%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86-Python/index.html">
 <meta property="og:site_name" content="雨昧阎的博客">
+<meta property="og:description" content="#原码来自https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41797946&#x2F;article&#x2F;details&#x2F;89417722的作者，据此更改调整。  import requestsimport timeimport reimport mathdef force(msg):    ret &#x3D; []    for w in msg:        ret.append(ord(w))">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-11T10:03:53.000Z">
+<meta property="article:modified_time" content="2022-08-11T10:15:17.379Z">
 <meta property="article:author" content="yumeiyan">
+<meta property="article:tag" content="小程序">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="雨昧阎的博客" type="application/atom+xml">
@@ -139,59 +144,174 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-嘉院校园网宽度自动登陆-Python" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/boke/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/boke/2022/08/10/C++%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2022-08-10T02:05:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/boke/2022/08/10/C++%E5%AD%A6%E4%B9%A0/">C++学习</a>
+    <h1 class="article-title" itemprop="name">
+      嘉院校园网宽度自动登陆(Python)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/boke/2022/08/11/%E5%98%89%E9%99%A2%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%AE%BD%E5%BA%A6%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86-Python/" class="archive-article-date">
+  	<time datetime="2022-08-11T10:03:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#原码来自<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41797946/article/details/89417722%E7%9A%84%E4%BD%9C%E8%80%85%EF%BC%8C%E6%8D%AE%E6%AD%A4%E6%9B%B4%E6%94%B9%E8%B0%83%E6%95%B4%E3%80%82">https://blog.csdn.net/qq_41797946/article/details/89417722的作者，据此更改调整。</a></p>
+<hr>
+<p>import requests<br>import time<br>import re<br>import math<br>def force(msg):<br>    ret &#x3D; []<br>    for w in msg:<br>        ret.append(ord(w))<br>    return bytes(ret)<br>def ordat(msg, idx):<br>    if len(msg) &gt; idx:<br>        return ord(msg[idx])<br>    return 0<br>def sencode(msg, key):<br>    l &#x3D; len(msg)<br>    pwd &#x3D; []<br>    for i in range(0, l, 4):<br>        pwd.append(<br>            ordat(msg, i) | ordat(msg, i + 1) &lt;&lt; 8 | ordat(msg, i + 2) &lt;&lt; 16<br>            | ordat(msg, i + 3) &lt;&lt; 24)<br>    if key:<br>        pwd.append(l)<br>    return pwd<br>def lencode(msg, key):<br>    l &#x3D; len(msg)<br>    ll &#x3D; (l - 1) &lt;&lt; 2<br>    if key:<br>        m &#x3D; msg[l - 1]<br>        if m &lt; ll - 3 or m &gt; ll:<br>            return<br>        ll &#x3D; m<br>    for i in range(0, l):<br>        msg[i] &#x3D; chr(msg[i] &amp; 0xff) + chr(msg[i] &gt;&gt; 8 &amp; 0xff) + chr(<br>            msg[i] &gt;&gt; 16 &amp; 0xff) + chr(msg[i] &gt;&gt; 24 &amp; 0xff)<br>    if key:<br>        return “”.join(msg)[0:ll]<br>    return “”.join(msg)<br>def get_xencode(msg, key):<br>    if msg &#x3D;&#x3D; “”:<br>        return “”<br>    pwd &#x3D; sencode(msg, True)<br>    pwdk &#x3D; sencode(key, False)<br>    if len(pwdk) &lt; 4:<br>        pwdk &#x3D; pwdk + [0] * (4 - len(pwdk))<br>    n &#x3D; len(pwd) - 1<br>    z &#x3D; pwd[n]<br>    y &#x3D; pwd[0]<br>    c &#x3D; 0x86014019 | 0x183639A0<br>    m &#x3D; 0<br>    e &#x3D; 0<br>    p &#x3D; 0<br>    q &#x3D; math.floor(6 + 52 &#x2F; (n + 1))<br>    d &#x3D; 0<br>    while 0 &lt; q:<br>        d &#x3D; d + c &amp; (0x8CE0D9BF | 0x731F2640)<br>        e &#x3D; d &gt;&gt; 2 &amp; 3<br>        p &#x3D; 0<br>        while p &lt; n:<br>            y &#x3D; pwd[p + 1]<br>            m &#x3D; z &gt;&gt; 5 ^ y &lt;&lt; 2<br>            m &#x3D; m + ((y &gt;&gt; 3 ^ z &lt;&lt; 4) ^ (d ^ y))<br>            m &#x3D; m + (pwdk[(p &amp; 3) ^ e] ^ z)<br>            pwd[p] &#x3D; pwd[p] + m &amp; (0xEFB8D130 | 0x10472ECF)<br>            z &#x3D; pwd[p]<br>            p &#x3D; p + 1<br>        y &#x3D; pwd[0]<br>        m &#x3D; z &gt;&gt; 5 ^ y &lt;&lt; 2<br>        m &#x3D; m + ((y &gt;&gt; 3 ^ z &lt;&lt; 4) ^ (d ^ y))<br>        m &#x3D; m + (pwdk[(p &amp; 3) ^ e] ^ z)<br>        pwd[n] &#x3D; pwd[n] + m &amp; (0xBB390742 | 0x44C6F8BD)<br>        z &#x3D; pwd[n]<br>        q &#x3D; q - 1<br>    return lencode(pwd, False)</p>
+<p>_PADCHAR &#x3D; “&#x3D;”<br>_ALPHA &#x3D; “LVoJPiCN2R8G90yg+hmFHuacZ1OWMnrsSTXkYpUq&#x2F;3dlbfKwv6xztjI7DeBE45QA”<br>def _getbyte(s, i):<br>    x &#x3D; ord(s[i]);<br>    if (x &gt; 255):<br>        print(“INVALID_CHARACTER_ERR: DOM Exception 5”)<br>        exit(0)<br>    return x<br>def get_base64(s):<br>    i&#x3D;0<br>    b10&#x3D;0<br>    x &#x3D; []<br>    imax &#x3D; len(s) - len(s) % 3;<br>    if len(s) &#x3D;&#x3D; 0:<br>        return s<br>    for i in range(0,imax,3):<br>        b10 &#x3D; (_getbyte(s, i) &lt;&lt; 16) | (_getbyte(s, i + 1) &lt;&lt; 8) | _getbyte(s, i + 2);<br>        x.append(_ALPHA[(b10 &gt;&gt; 18)]);<br>        x.append(_ALPHA[((b10 &gt;&gt; 12) &amp; 63)]);<br>        x.append(_ALPHA[((b10 &gt;&gt; 6) &amp; 63)]);<br>        x.append(_ALPHA[(b10 &amp; 63)])<br>    i&#x3D;imax<br>    if len(s) - imax &#x3D;&#x3D;1:<br>        b10 &#x3D; _getbyte(s, i) &lt;&lt; 16;<br>        x.append(_ALPHA[(b10 &gt;&gt; 18)] + _ALPHA[((b10 &gt;&gt; 12) &amp; 63)] + _PADCHAR + _PADCHAR);<br>    elif len(s) - imax &#x3D;&#x3D; 2:<br>        b10 &#x3D; (_getbyte(s, i) &lt;&lt; 16) | (_getbyte(s, i + 1) &lt;&lt; 8);<br>        x.append(_ALPHA[(b10 &gt;&gt; 18)] + _ALPHA[((b10 &gt;&gt; 12) &amp; 63)] + _ALPHA[((b10 &gt;&gt; 6) &amp; 63)] + _PADCHAR);<br>    return “”.join(x)</p>
+<p>import hmac<br>import hashlib<br>def get_md5(password,token):<br>    return hmac.new(token.encode(), password.encode(), hashlib.md5).hexdigest()</p>
+<p>def get_sha1(value):<br>    return hashlib.sha1(value.encode()).hexdigest()</p>
+<p>header&#x3D;{<br>    ‘User-Agent’:’Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;97.0.4692.71 Safari&#x2F;537.36’<br>}<br>init_url&#x3D;”<a target="_blank" rel="noopener" href="http://10.110.74.91&quot;/">http://10.110.74.91&quot;</a></p>
+<p>get_challenge_api&#x3D;”<a target="_blank" rel="noopener" href="http://10.110.74.91/cgi-bin/get_challenge&quot;">http://10.110.74.91/cgi-bin/get_challenge&quot;</a></p>
+<p>srun_portal_api&#x3D;”<a target="_blank" rel="noopener" href="http://10.110.74.91/cgi-bin/srun_portal&quot;">http://10.110.74.91/cgi-bin/srun_portal&quot;</a><br>n &#x3D; ‘200’<br>type &#x3D; ‘1’<br>ac_id&#x3D;’4’<br>enc &#x3D; “srun_bx1”<br>def get_chksum():<br>    chkstr &#x3D; token+username<br>    chkstr +&#x3D; token+hmd5<br>    chkstr +&#x3D; token+ac_id<br>    chkstr +&#x3D; token+ip<br>    chkstr +&#x3D; token+n<br>    chkstr +&#x3D; token+type<br>    chkstr +&#x3D; token+i<br>    return chkstr<br>def get_info():<br>    info_temp&#x3D;{<br>        “username”:username,<br>        “password”:password,<br>        “ip”:ip,<br>        “acid”:ac_id,<br>        “enc_ver”:enc<br>    }<br>    i&#x3D;re.sub(“‘“,’”‘,str(info_temp))<br>    i&#x3D;re.sub(“ “,’’,i)<br>    return i<br>def init_getip():<br>    global ip<br>    init_res&#x3D;requests.get(init_url,headers&#x3D;header)<br>    print(“初始化获取ip”)<br>    ip&#x3D;’10.163.2.193’ #改成网络登陆成功后显示的ip<br>    print(“ip:”+ip)</p>
+<p>def get_token():</p>
+<p>print(“获取token”)</p>
+<p>​    global token<br>​    get_challenge_params&#x3D;{<br>​        “callback”: “jQuery112404953340710317169_”+str(int(time.time()*1000)),<br>​        “username”:username,<br>​        “ip”:ip,<br>​        “<em>“:int(time.time()<em>1000),<br>​    }<br>​    get_challenge_res&#x3D;requests.get(get_challenge_api,params&#x3D;get_challenge_params,headers&#x3D;header)<br>​    token&#x3D;re.search(‘“challenge”:”(.</em>?)”‘,get_challenge_res.text).group(1)<br>def do_complex_work():<br>​    global i,hmd5,chksum<br>​    i&#x3D;get_info()<br>​    i&#x3D;”{SRBX1}”+get_base64(get_xencode(i,token))<br>​    hmd5&#x3D;get_md5(password,token)<br>​    chksum&#x3D;get_sha1(get_chksum())<br>def login():<br>​    srun_portal_params&#x3D;{<br>​        ‘callback’: ‘jQuery11240645308969735664</em>‘+str(int(time.time()*1000)),<br>​        ‘action’:’login’,<br>​        ‘username’:username,<br>​        ‘password’:’{MD5}’+hmd5,<br>​        ‘ac_id’:ac_id,<br>​        ‘ip’:ip,<br>​        ‘chksum’:chksum,<br>​        ‘info’:i,<br>​        ‘n’:n,<br>​        ‘type’:type,<br>​        ‘os’:’windows+10’,<br>​        ‘name’:’windows’,<br>​        ‘double_stack’:’0’,<br>​        ‘_’:int(time.time()*1000)<br>​    }</p>
+<p>print(srun_portal_params)</p>
+<p>​    srun_portal_res&#x3D;requests.get(srun_portal_api,params&#x3D;srun_portal_params,headers&#x3D;header)<br>​    print(srun_portal_res.text)</p>
+<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    global username,password<br>    username&#x3D;”00183914@chinanet”#学号+运营商，中国移动cmcc联通unicom电信chinanet<br>    password&#x3D;”090013”<br>    init_getip()<br>    get_token()<br>    do_complex_work()<br>    login()</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size-150x150&data=https://fan2627145175.gitee.io/boke/2022/08/11/%E5%98%89%E9%99%A2%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%AE%BD%E5%BA%A6%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86-Python/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/boke/2022/08/10/C++%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -214,9 +334,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

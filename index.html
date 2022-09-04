@@ -179,102 +179,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原文地址:<a target="_blank" rel="noopener" href="https://www.yanbinghu.com/2020/12/12/46629.html">https://www.yanbinghu.com/2020/12/12/46629.html</a></p>
-<p>不知道你有没有看到过scanf下面这样的用法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 来源：公众号【编程珠玑】</span><br><span class="line">// 作者：守望先生</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    char a[128] = &#123;0&#125;;</span><br><span class="line">    scanf(&quot;%[0-9]&quot;,a);</span><br><span class="line">    printf(&quot;%s\n&quot;,a);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>上面的代码什么意思呢？试一下几个输入输出：</p>
-<p>示例0：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：13579</span><br><span class="line">输出：13579</span><br></pre></td></tr></table></figure>
-
-
-
-<p>示例1：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入:121abc</span><br><span class="line">输出:121</span><br></pre></td></tr></table></figure>
-
-<p>示例2：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入:shouwang123nb455</span><br><span class="line">输出:</span><br></pre></td></tr></table></figure>
-
-
-
-<p>注意：这里输出不是123，如果想要输出123怎么办？请看后面丢弃特定字符部分。</p>
-<p>看到这里，估计你已经看清套路了，没错，[0-9]表示scanf只读取0-9的字符，而如果遇到不在该范围内的字符，则停止，不再继续读取，就是前面我们看到的示例情况了。</p>
-<h2 id="scanf的"><a href="#scanf的" class="headerlink" title="scanf的["></a>scanf的[</h2><p>scanf函数中，还有一个不常被人注意的，就是[了。它用来扫描特定的字符集。如果它以^开头，表示扫描除了字符集以外的所有字符，否则就是前面我们看到的，只扫描读取指定字符。</p>
-<h2 id="scanf读取空字符"><a href="#scanf读取空字符" class="headerlink" title="scanf读取空字符"></a>scanf读取空字符</h2><p>我们都知道，scanf在读取内容的时候，会跳过空字符，比如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char s[128] = &#123;0&#125;;</span><br><span class="line">scanf(&quot;%s&quot;,s);</span><br><span class="line">printf(&quot;%s\n&quot;,s);</span><br></pre></td></tr></table></figure>
-
-<p>假设输入为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bianchengzhuji</span><br></pre></td></tr></table></figure>
-
-
-
-<p>那么输出将会是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bianchengzhuji</span><br></pre></td></tr></table></figure>
-
-
-
-<p>注意，前面的空字符并没有读入到字符串s中，而是被跳过了。</p>
-<p>那如果要读取空字符怎么办？很简单：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%[^\n]&quot;,s);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这里的意思就是说，除了换行符，其他字符都读入，也就是说前面的空字符也会被读取，就达到了我们的目的了。</p>
-<h2 id="忽略开头的换行符"><a href="#忽略开头的换行符" class="headerlink" title="忽略开头的换行符"></a>忽略开头的换行符</h2><p>如果我们一开始就按回车，你会发现，s什么都没有读入，如何忽略开始的换行呢？像下面这样就可以了：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 来源：公众号【编程珠玑】</span><br><span class="line">// 作者：守望先生</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    char a[10] = &#123;0&#125;;</span><br><span class="line">    scanf(&quot;%*[\n]%[^\n]&quot;,a);</span><br><span class="line">    printf(&quot;%s\n&quot;,a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输入输出示例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入:[回车][回车]abc</span><br><span class="line">输出:abc</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输入时，按下两次回车，再输入其他字符，则最终会读取其他字符，而忽略开头的回车换行。我们知道，在scanf中，*是跳过相应的字符项，比如，跳过开头的两个数字：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 来源：公众号【编程珠玑】</span><br><span class="line">// 作者：守望先生</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int third = 0;</span><br><span class="line">    scanf(&quot;%*d %*d %d&quot;,&amp;third);</span><br><span class="line">    printf(&quot;%d\n&quot;,third);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">111 222 333</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">333</span><br></pre></td></tr></table></figure>
-
-
-
-<p>scanf会跳过前面的111和222，则会读取333，<strong>这个功能在读取文件获取特定列内容的时候很有用</strong>。同理，在前面的例子中%*[\n]即表示跳过换行，<a target="_blank" rel="noopener" href="https://www.yanbinghu.com/2020/12/12/46629.html#fn_\n">\n</a>则读取任意字符，直到遇到换行。</p>
-<h2 id="丢弃特定字符"><a href="#丢弃特定字符" class="headerlink" title="丢弃特定字符"></a>丢弃特定字符</h2><p>最开始的例子中，如果开头是字母，即便想读取数字，也读取不到，那么如何跳过开头的字母呢？仿照刚刚讲的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 来源：公众号【编程珠玑】</span><br><span class="line">// 作者：守望先生</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    char a[128] = &#123;0&#125;;</span><br><span class="line">    scanf(&quot;%*[a-zA-Z]%[0-9]&quot;,a);</span><br><span class="line">    printf(&quot;%s\n&quot;,a);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这样，开头的字母就会被丢弃。</p>
-<h2 id="读取指定长度的任意字符"><a href="#读取指定长度的任意字符" class="headerlink" title="读取指定长度的任意字符"></a>读取指定长度的任意字符</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char s[8] = &#123;0&#125;;</span><br><span class="line">scanf(&quot;%7s&quot;,s);</span><br></pre></td></tr></table></figure>
-
-<p>输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abcdefghij</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abcdefg</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这样可以避免缓冲区溢出。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>scanf读取内容会跳过开头的空白字符，遇到换行符或者不是目标字符时结束读取。当然，你不是没有办法，今天所分享的就是办法。当然了，很多时候，你可能会选择使用fgets，getchar之类的函数，无妨。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 来源：公众号【编程珠玑】</span><br><span class="line">// 作者：守望先生</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int a = 0;</span><br><span class="line">    int b = 0;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;a,&amp;b);</span><br><span class="line">    printf(&quot;%d %d\n&quot;,a,b);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abcd1234</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输出会是什么？为什么？</p>
-
+        <p>scanf的各种用法
+        
       
 
       
@@ -657,11 +563,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
               <li class="article-tag-list-item">

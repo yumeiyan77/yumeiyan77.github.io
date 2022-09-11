@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fan2627145175.gitee.io/boke">
-  <title>Archives | 雨昧阎的博客</title>
+  <title>C++学习 | 雨昧阎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="雨昧阎的博客">
-<meta property="og:url" content="https://fan2627145175.gitee.io/boke/archives/index.html">
+  <meta name="description" content="C++第二天 [toc]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++学习">
+<meta property="og:url" content="https://fan2627145175.gitee.io/boke/2022/09/10/C++%E5%AD%A6%E4%B9%A02/index.html">
 <meta property="og:site_name" content="雨昧阎的博客">
+<meta property="og:description" content="C++第二天 [toc]">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fan2627145175.gitee.io/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220910_212324_tv.danmaku.bili.jpg">
+<meta property="og:image" content="https://fan2627145175.gitee.io/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691.jpg">
+<meta property="article:published_time" content="2022-09-10T12:19:34.000Z">
+<meta property="article:modified_time" content="2022-09-11T08:16:53.240Z">
 <meta property="article:author" content="yumeiyan">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fan2627145175.gitee.io/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220910_212324_tv.danmaku.bili.jpg">
   
     <link rel="alternative" href="/atom.xml" title="雨昧阎的博客" type="application/atom+xml">
   
@@ -153,35 +161,96 @@
           </div>
           <div id="js-content" class="content-ll">
             
+<article id="post-C++学习2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      C++学习
+    </h1>
   
-    
-    
+
+        
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+              
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/boke/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/boke/2022/09/10/C++%E5%AD%A6%E4%B9%A02/" class="archive-article-date">
+
+        
+        <a href="/boke/2022/09/10/C++%E5%AD%A6%E4%B9%A02/" class="archive-article-date">
   	<time datetime="2022-09-10T12:19:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/boke/2022/09/10/C++%E5%AD%A6%E4%B9%A02/">C++学习</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>C++第二天</p>
+<p>[toc]</p>
+<span id="more"></span> 
 
-        <div class="article-info info-on-right">
-          
+<h1 id="sizeof用法"><a href="#sizeof用法" class="headerlink" title="sizeof用法"></a>sizeof用法</h1><p><img src="/boke/../images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220910_212324_tv.danmaku.bili.jpg" alt="Screenshot_20220910_212324_tv.danmaku.bili"></p>
+<p>float 4字节 double 8字节。</p>
+<h1 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h1><p>C和C++中字符只占1个字节。</p>
+<p>显示字符型变量时用单引号将字符括起来，不要用双引号。</p>
+<p>单引号里面只能有一个字符，不能是字符串。</p>
+<p>看ASCII码值可以这样</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> ch = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">cout &lt;&lt; (<span class="type">int</span>)ch &lt;&lt; endl;<span class="comment">//使用强制转换的方法</span></span><br></pre></td></tr></table></figure>
+
+<p>常见的ASCII码</p>
+<p>a-97</p>
+<p>A-65</p>
+<h1 id="科学计数法"><a href="#科学计数法" class="headerlink" title="科学计数法"></a>科学计数法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> f2 = <span class="number">3e2</span>; <span class="comment">//3*10^2</span></span><br><span class="line"></span><br><span class="line"><span class="type">float</span> f3 = <span class="number">3e-2</span>;<span class="comment">//3*10^-2 </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><p>\n 换行;</p>
+<p>\t 水平制表 ;(为了看起来更整齐)</p>
+<p>例如</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">&quot;aaa\t&quot;</span> &lt;&lt; endl; </span><br><span class="line">cout &lt;&lt; <span class="string">&quot;aaaa\t&quot;</span> &lt;&lt; endl;<span class="comment">//\t一共8个字符，三个a那后面跟5个空格，四个后面跟4个空格</span></span><br></pre></td></tr></table></figure>
+
+<p>\ \ 输出一个;</p>
+<h1 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a>字符串型</h1><p> <strong>C语言风格</strong><code>char 变量名[] = &quot;字符串值&quot;</code></p>
+<p><strong>C++风格</strong> <code>string 变量名 = &quot;字符串值&quot;</code></p>
+<h1 id="布尔类型-bool"><a href="#布尔类型-bool" class="headerlink" title="布尔类型 bool"></a>布尔类型 bool</h1><p>bool只有两个值</p>
+<ul>
+<li>true –真 本质是1</li>
+<li>false–假 本质是0</li>
+</ul>
+<p>bool占一个字节</p>
+<p>只要是非零的值都代表真</p>
+<p>​	比如100会是1，-100也是1；</p>
+<h1 id="数据输入"><a href="#数据输入" class="headerlink" title="数据输入"></a>数据输入</h1><p>从键盘输入数据</p>
+<p>语法  <code>cin &gt;&gt; 变量</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line">cin &gt;&gt; a;</span><br><span class="line">cout &lt;&lt; a的值为&lt;&lt; a &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>输入字符串类型要加一个#include<string>的头文件；</p>
+<h1 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h1><p><img src="/boke/../images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691.jpg" alt="Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691"></p>
+<p>注意：</p>
+<p>两个整型相除依旧是整数 例如10&#x2F;3得3，舍弃小数部分。</p>
+<p>除数不能为0。</p>
+<p>两个小数相除可以得小数，但默认只有6位有效数字。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,171 +262,122 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size-150x150&data=https://fan2627145175.gitee.io/boke/2022/09/10/C++%E5%AD%A6%E4%B9%A02/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/boke/2022/09/04/scanf%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2022-09-04T10:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/boke/2022/09/04/scanf%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">scanf用法详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/boke/2022/09/04/scanf%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/">scanf用法详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sizeof%E7%94%A8%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">sizeof用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">字符型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">科学计数法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">4.</span> <span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">字符串型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B-bool"><span class="toc-number">6.</span> <span class="toc-text">布尔类型 bool</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5"><span class="toc-number">7.</span> <span class="toc-text">数据输入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">8.</span> <span class="toc-text">算术运算符</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/boke/2022/08/11/%E5%98%89%E9%99%A2%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%AE%BD%E5%BA%A6%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86-Python/" class="archive-article-date">
-  	<time datetime="2022-08-11T10:03:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-11</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/boke/2022/08/11/%E5%98%89%E9%99%A2%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%AE%BD%E5%BA%A6%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86-Python/">嘉院校园网宽度自动登陆(Python)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/boke/2022/08/10/C++%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2022-08-10T02:05:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/boke/2022/08/10/C++%E5%AD%A6%E4%B9%A0/">C++学习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/boke/2022/08/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2022-08-06T07:00:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/boke/2022/08/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">搭建个人博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+
 
 
           </div>
@@ -384,8 +404,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

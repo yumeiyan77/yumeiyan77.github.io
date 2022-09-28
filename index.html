@@ -65,7 +65,7 @@
 
 
 		<nav>
-    		总文章数 5
+    		总文章数 6
 		</nav>
 
 		<nav class="header-smart-menu">
@@ -153,6 +153,94 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-idea的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/boke/2022/09/28/idea%E7%9A%84%E4%BD%BF%E7%94%A8/">idea的使用</a>
+    </h1>
+  
+
+        
+        
+              
+      
+
+        
+        <a href="/boke/2022/09/28/idea%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2022-09-28T03:54:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><h2 id="sout模板"><a href="#sout模板" class="headerlink" title="sout模板"></a>sout模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//psvm</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sout输出的模板</span></span><br><span class="line">System.out.println();</span><br><span class="line">  </span><br><span class="line"><span class="comment">//soutp输出形参，看输入进来的参数</span></span><br><span class="line">System.out.println(<span class="string">&quot;args = &quot;</span> + Arrays.deepToString(args));</span><br><span class="line"></span><br><span class="line"><span class="comment">//soutm输出方法名</span></span><br><span class="line">System.out.println(<span class="string">&quot;Customer.main&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//soutv 输出最近变量的值</span></span><br><span class="line"><span class="type">int</span> a；</span><br><span class="line">System.out.println(<span class="string">&quot;a = &quot;</span> + a);</span><br><span class="line"></span><br><span class="line"><span class="comment">//xxx.sout 输出指定变量的值</span></span><br><span class="line"><span class="type">int</span> a;</span><br><span class="line">System.out.println(a);<span class="comment">//a.sout</span></span><br><span class="line">  </span><br><span class="line">System.out.println(<span class="string">&quot;a = &quot;</span> + a);<span class="comment">//a.soutv</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="for模板"><a href="#for模板" class="headerlink" title="for模板"></a>for模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">String[] arr = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;fan&quot;</span>,<span class="string">&quot;jun&quot;</span>,<span class="string">&quot;hao&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//fori，普通for循环</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; ; i++) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//iter,增强for循环</span></span><br><span class="line"><span class="keyword">for</span> (String s : arr) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//itar,帮写了个赋值，加个sout输出s即可</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//arr.length.fori,比fori多了判断条件</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125; </span><br></pre></td></tr></table></figure>
+
+<h2 id="list模板"><a href="#list模板" class="headerlink" title="list模板"></a>list模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ArrayList</span> <span class="variable">list</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line">list.add(<span class="number">345</span>);</span><br><span class="line">list.add(<span class="number">567</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//list.for</span></span><br><span class="line"><span class="keyword">for</span> (Object o : list) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//list.fori</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//list.forr，逆序遍历</span></span><br><span class="line"> <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> list.size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="if-模板"><a href="#if-模板" class="headerlink" title="if 模板"></a>if 模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ArrayList</span> <span class="variable">list</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line">list.add(<span class="number">345</span>);</span><br><span class="line">list.add(<span class="number">567</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//ifn</span></span><br><span class="line"><span class="keyword">if</span> (list == <span class="literal">null</span>) &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//inn</span></span><br><span class="line"><span class="keyword">if</span> (list != <span class="literal">null</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//xxx.null</span></span><br><span class="line"> <span class="keyword">if</span> (list == <span class="literal">null</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//xxx.nn</span></span><br><span class="line"><span class="keyword">if</span> (list != <span class="literal">null</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="属性模板"><a href="#属性模板" class="headerlink" title="属性模板"></a>属性模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//prsf</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//psf</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> </span><br><span class="line">   </span><br><span class="line"><span class="comment">//psfi</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//psfs</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String </span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/boke/2022/09/28/idea%E7%9A%84%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
   
     <article id="post-C++学习2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -649,11 +737,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
             
             <div class="clearfix"></div>

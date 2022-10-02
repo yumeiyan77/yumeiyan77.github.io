@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fan2627145175.gitee.io/boke">
-  <title>idea的常用模板 | 雨昧阎的博客</title>
+  <title>idea的常用模板和javadoc | 雨昧阎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="模板args模板1234&#x2F;&#x2F;psvm和main        public static void main(String[] args) &amp;#123;        &amp;#125;  sout模板1234567891011121314151617181920212223&#x2F;&#x2F;psvm和mainpublic static void main(String[] args) &amp;#123;    &amp;#1">
+  <meta name="description" content="args，sout，for，list，if，变量属性，javadoc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="idea的常用模板">
-<meta property="og:url" content="https://fan2627145175.gitee.io/boke/2022/09/28/idea%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:title" content="idea的常用模板和javadoc">
+<meta property="og:url" content="https://fan2627145175.gitee.io/boke/2022/09/28/idea%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF%E5%92%8Cjavadoc/index.html">
 <meta property="og:site_name" content="雨昧阎的博客">
-<meta property="og:description" content="模板args模板1234&#x2F;&#x2F;psvm和main        public static void main(String[] args) &amp;#123;        &amp;#125;  sout模板1234567891011121314151617181920212223&#x2F;&#x2F;psvm和mainpublic static void main(String[] args) &amp;#123;    &amp;#1">
+<meta property="og:description" content="args，sout，for，list，if，变量属性，javadoc">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-28T03:54:36.000Z">
-<meta property="article:modified_time" content="2022-09-28T09:36:45.419Z">
+<meta property="article:modified_time" content="2022-10-02T01:01:29.543Z">
 <meta property="article:author" content="yumeiyan">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -158,14 +158,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-idea的常用模板" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-idea的常用模板和javadoc" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      idea的常用模板
+      idea的常用模板和javadoc
     </h1>
   
 
@@ -183,7 +183,7 @@
       
 
         
-        <a href="/boke/2022/09/28/idea%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF/" class="archive-article-date">
+        <a href="/boke/2022/09/28/idea%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF%E5%92%8Cjavadoc/" class="archive-article-date">
   	<time datetime="2022-09-28T03:54:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-28</time>
 </a>
         
@@ -191,8 +191,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
-
+        <p>args，sout，for，list，if，变量属性，javadoc<span id="more"></span></p>
 <h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><h2 id="args模板"><a href="#args模板" class="headerlink" title="args模板"></a>args模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//psvm和main</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="sout模板"><a href="#sout模板" class="headerlink" title="sout模板"></a>sout模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//psvm和main</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sout输出的模板</span></span><br><span class="line">System.out.println();</span><br><span class="line">  </span><br><span class="line"><span class="comment">//soutp输出形参，看输入进来的参数</span></span><br><span class="line">System.out.println(<span class="string">&quot;args = &quot;</span> + Arrays.deepToString(args));</span><br><span class="line"></span><br><span class="line"><span class="comment">//soutm输出方法名</span></span><br><span class="line">System.out.println(<span class="string">&quot;Customer.main&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//soutv 输出最近变量的值</span></span><br><span class="line"><span class="type">int</span> a；</span><br><span class="line">System.out.println(<span class="string">&quot;a = &quot;</span> + a);</span><br><span class="line"></span><br><span class="line"><span class="comment">//xxx.sout 输出指定变量的值</span></span><br><span class="line"><span class="type">int</span> a;</span><br><span class="line">System.out.println(a);<span class="comment">//a.sout</span></span><br><span class="line">  </span><br><span class="line">System.out.println(<span class="string">&quot;a = &quot;</span> + a);<span class="comment">//a.soutv</span></span><br></pre></td></tr></table></figure>
@@ -204,6 +203,10 @@
 <h2 id="if-模板"><a href="#if-模板" class="headerlink" title="if 模板"></a>if 模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ArrayList</span> <span class="variable">list</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line">list.add(<span class="number">345</span>);</span><br><span class="line">list.add(<span class="number">567</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//ifn</span></span><br><span class="line"><span class="keyword">if</span> (list == <span class="literal">null</span>) &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//inn</span></span><br><span class="line"><span class="keyword">if</span> (list != <span class="literal">null</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//xxx.null</span></span><br><span class="line"><span class="keyword">if</span> (list == <span class="literal">null</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//xxx.nn</span></span><br><span class="line"><span class="keyword">if</span> (list != <span class="literal">null</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="变量属性模板"><a href="#变量属性模板" class="headerlink" title="变量属性模板"></a>变量属性模板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//prsf</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//psf</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> </span><br><span class="line">   </span><br><span class="line"><span class="comment">//psfi</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//psfs</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String </span><br></pre></td></tr></table></figure>
+
+<h2 id="javadoc"><a href="#javadoc" class="headerlink" title="javadoc"></a>javadoc</h2><p>Locale：zh-cn</p>
+<p>Command line arguments：-encoding UTF-8 -charset UTF-8</p>
+
       
 
       
@@ -272,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size-150x150&data=https://fan2627145175.gitee.io/boke/2022/09/28/idea%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size-150x150&data=https://fan2627145175.gitee.io/boke/2022/09/28/idea%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF%E5%92%8Cjavadoc/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,7 +318,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.</span> <span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#args%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.1.</span> <span class="toc-text">args模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sout%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.2.</span> <span class="toc-text">sout模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.3.</span> <span class="toc-text">for模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.4.</span> <span class="toc-text">list模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#if-%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.5.</span> <span class="toc-text">if 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%B1%9E%E6%80%A7%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.6.</span> <span class="toc-text">变量属性模板</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.</span> <span class="toc-text">模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#args%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.1.</span> <span class="toc-text">args模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sout%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.2.</span> <span class="toc-text">sout模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.3.</span> <span class="toc-text">for模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.4.</span> <span class="toc-text">list模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#if-%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.5.</span> <span class="toc-text">if 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%B1%9E%E6%80%A7%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.6.</span> <span class="toc-text">变量属性模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javadoc"><span class="toc-number">1.7.</span> <span class="toc-text">javadoc</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -426,15 +429,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
             
             <div class="clearfix"></div>

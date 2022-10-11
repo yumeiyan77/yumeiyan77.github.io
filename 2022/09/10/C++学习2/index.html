@@ -199,9 +199,9 @@
 
 <span id="more"></span> 
 
-<h1><span id="sizeof用法">sizeof用法</span></h1><p><img src="/boke/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220910_212324_tv.danmaku.bili.jpg" alt="Screenshot_20220910_212324_tv.danmaku.bili"></p>
+<h1 id="sizeof用法"><a href="#sizeof用法" class="headerlink" title="sizeof用法"></a>sizeof用法</h1><p><img src="/boke/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220910_212324_tv.danmaku.bili.jpg" alt="Screenshot_20220910_212324_tv.danmaku.bili"></p>
 <p>float 4字节 double 8字节。</p>
-<h1><span id="字符型">字符型</span></h1><p>C和C++中字符只占1个字节。</p>
+<h1 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h1><p>C和C++中字符只占1个字节。</p>
 <p>显示字符型变量时用单引号将字符括起来，不要用双引号。</p>
 <p>单引号里面只能有一个字符，不能是字符串。</p>
 <p>看ASCII码值可以这样</p>
@@ -210,21 +210,21 @@
 <p>常见的ASCII码</p>
 <p>a-97</p>
 <p>A-65</p>
-<h1><span id="科学计数法">科学计数法</span></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> f2 = <span class="number">3e2</span>; <span class="comment">//3*10^2</span></span><br><span class="line"></span><br><span class="line"><span class="type">float</span> f3 = <span class="number">3e-2</span>;<span class="comment">//3*10^-2 </span></span><br></pre></td></tr></table></figure>
+<h1 id="科学计数法"><a href="#科学计数法" class="headerlink" title="科学计数法"></a>科学计数法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> f2 = <span class="number">3e2</span>; <span class="comment">//3*10^2</span></span><br><span class="line"></span><br><span class="line"><span class="type">float</span> f3 = <span class="number">3e-2</span>;<span class="comment">//3*10^-2 </span></span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h1><span id="转义字符">转义字符</span></h1><p>\n 换行;</p>
+<h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><p>\n 换行;</p>
 <p>\t 水平制表 ;(为了看起来更整齐)</p>
 <p>例如</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">&quot;aaa\t&quot;</span> &lt;&lt; endl; </span><br><span class="line">cout &lt;&lt; <span class="string">&quot;aaaa\t&quot;</span> &lt;&lt; endl;<span class="comment">//\t一共8个字符，三个a那后面跟5个空格，四个后面跟4个空格</span></span><br></pre></td></tr></table></figure>
 
 <p>\ \ 输出一个;</p>
-<h1><span id="字符串型">字符串型</span></h1><p> <strong>C语言风格</strong><code>char 变量名[] = &quot;字符串值&quot;</code></p>
+<h1 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a>字符串型</h1><p> <strong>C语言风格</strong><code>char 变量名[] = &quot;字符串值&quot;</code></p>
 <p><strong>C++风格</strong> <code>string 变量名 = &quot;字符串值&quot;</code></p>
-<h1><span id="布尔类型-bool">布尔类型 bool</span></h1><p>bool只有两个值</p>
+<h1 id="布尔类型-bool"><a href="#布尔类型-bool" class="headerlink" title="布尔类型 bool"></a>布尔类型 bool</h1><p>bool只有两个值</p>
 <ul>
 <li>true –真 本质是1</li>
 <li>false–假 本质是0</li>
@@ -232,14 +232,14 @@
 <p>bool占一个字节</p>
 <p>只要是非零的值都代表真</p>
 <p>​	比如100会是1，-100也是1；</p>
-<h1><span id="数据输入">数据输入</span></h1><p>从键盘输入数据</p>
+<h1 id="数据输入"><a href="#数据输入" class="headerlink" title="数据输入"></a>数据输入</h1><p>从键盘输入数据</p>
 <p>语法  <code>cin &gt;&gt; 变量</code></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line">cin &gt;&gt; a;</span><br><span class="line">cout &lt;&lt; a的值为&lt;&lt; a &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
 
 
 
-<p>输入字符串类型要加一个#include<string>的头文件；</string></p>
-<h1><span id="算术运算符">算术运算符</span></h1><p><img src="/boke/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691.jpg" alt="Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691"></p>
+<p>输入字符串类型要加一个#include<string>的头文件；</p>
+<h1 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h1><p><img src="/boke/images/C++%E5%AD%A6%E4%B9%A02/Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691.jpg" alt="Screenshot_20220911_160245_tv.danmaku.bili_edit_6378425980691"></p>
 <p>注意：</p>
 <p>两个整型相除依旧是整数 例如10&#x2F;3得3，舍弃小数部分。</p>
 <p>除数不能为0。</p>
@@ -365,7 +365,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">sizeof用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">字符型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">科学计数法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">字符串型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">布尔类型 bool</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">数据输入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">算术运算符</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sizeof%E7%94%A8%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">sizeof用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">字符型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">科学计数法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">4.</span> <span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">字符串型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B-bool"><span class="toc-number">6.</span> <span class="toc-text">布尔类型 bool</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5"><span class="toc-number">7.</span> <span class="toc-text">数据输入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">8.</span> <span class="toc-text">算术运算符</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -472,15 +472,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
               </li>
              
               <li class="article-tag-list-item">
